@@ -1,0 +1,2 @@
+This is my project for searching weather in the World.
+Its name is "MoonRiver" and that`s second actualization of the project, which is based on library Retrofit2 for getting responses from the server.
