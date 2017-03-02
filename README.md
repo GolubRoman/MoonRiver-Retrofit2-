@@ -1,2 +1,26 @@
-This is my project for searching weather in the World.
-Its name is "MoonRiver" and that`s second actualization of the project, which is based on library Retrofit2 for getting responses from the server.
+# About the Moon River
+This is the project for practice, where i try working with different useful technologies in Android development, as:
+* Multi Threading with AsynkTask class
+* Google Play Services for getting geolocation of user
+* Making query to server with url to API
+* Parsing JSON data, got from the server
+* Using library Retrofit2 for simplifying the process of getting response from the server
+* ButterKnife library for simplifying code of initialization
+* System Git/Github with using console
+* Improving skills in OOP and JAVA
+* Exploring Android SDK and etc.
+
+The project realizes application for finding weather any places
+
+## Textures
+All of the textures were created on Photoshop by myself, except of glass image.
+
+#### Logo
+
+[![|Solid](https://pp.userapi.com/c636721/v636721736/5d924/RStOT9XyzOs.jpg)]()
+
+### View
+
+- [![|Solid](https://pp.userapi.com/c636721/v636721736/5d92b/ax7GFbSVNTM.jpg)]()
+
+Thank you! Good luck)
