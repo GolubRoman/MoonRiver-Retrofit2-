@@ -1,23 +1,10 @@
 package com.golubroman.golub.weatherv201.myretrofit;
-import android.app.Application;
-import android.os.AsyncTask;
 
-import com.golubroman.golub.weatherv201.ElementListView;
-import com.golubroman.golub.weatherv201.myretrofit.ListPOJO;
-import com.golubroman.golub.weatherv201.myretrofit.OpenWeatherApi;
-import com.golubroman.golub.weatherv201.myretrofit.WeatherPOJO;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.golubroman.golub.weatherv201.WeatherList.ElementListView;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -25,10 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitModule{
     private static OpenWeatherApi openWeatherApi;
     private static Retrofit retrofit;
-    private static WeatherPOJO weatherPOJO;
-    private ArrayList<ElementListView> elementListViewList;
     final static String cnt = "16";
-    final static String appID = "28e909fe816297eafabdac9118bfa097";
     public static void buildApi(){
         retrofit = new Retrofit.Builder().
                 baseUrl("http://api.openweathermap.org/").
@@ -51,12 +35,12 @@ public class RetrofitModule{
             String wind = roundString(listElement.getSpeed().toString());
             String mintemp = roundString(listElement.getTemp().getMin().toString());
             String maxtemp = roundString(listElement.getTemp().getMax().toString());
-            if(units == "Metric"){
+            if(units.equals("Metric")){
                 mintemp += " \u00B0"+"C";
                 maxtemp += " \u00B0"+"C";
                 wind += " km/h SW";
             }
-            else if(units == "Imperial"){
+            else if(units.equals("Imperial")){
                 mintemp += " \u00B0"+"F";
                 maxtemp += " \u00B0"+"F";
                 wind += " mph SW";
